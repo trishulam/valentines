@@ -47,6 +47,12 @@ export interface MemoryGalleryState {
   visible: boolean;
 }
 
+export interface MemoryCarouselState {
+  visible: boolean;
+  items: MemoryItem[];
+  currentIndex: number;
+}
+
 export interface SurpriseState {
   active: boolean;
   surpriseType: SurpriseType;

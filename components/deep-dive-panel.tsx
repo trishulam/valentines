@@ -168,9 +168,9 @@ export const DeepDivePanel = ({
           <ReactMarkdown
             components={{
               // Custom styling for code blocks
-              code: ({ node, inline, className, children, ...props }) => {
+              code: ({ className, children, ...props }) => {
                 const match = /language-(\w+)/.exec(className || '');
-                return !inline && match ? (
+                return match ? (
                   <div className="my-4 overflow-hidden rounded-lg border border-brand-gray-medium/20 bg-white">
                     <div className="border-b border-brand-gray-medium/20 bg-brand-gray-medium/5 px-4 py-2 text-xs font-medium text-brand-gray-medium">
                       {match[1]}
